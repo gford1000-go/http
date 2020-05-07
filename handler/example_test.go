@@ -5,6 +5,7 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"time"
 )
 
 func panicFn(http.ResponseWriter, *http.Request) Error {
@@ -22,6 +23,7 @@ func ExampleWrapper() {
 
 	var port = 8081
 	go startServer(port)
+	time.Sleep(100 * time.Millisecond)
 
 	resp, _ := http.Get(fmt.Sprintf("http://localhost:%v/panic", port))
 
