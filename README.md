@@ -10,8 +10,9 @@ HTTP provides helper functions when using the standard golang `http` package.
 
 An example of use is available in GoDocs.
 
-`http/handler` provides the `Wrapper` function, which allows `http` handler functions to return errors
-and have these interpreted into HTTP return codes.  Panics are handled as 500 internal server errors.
+The `Wrapper` function wrappers the extended `HandleFuncWithError` type, which allows request handlers to return errors that are handled in a standard manner.  Additionally panics are captured and managed as 500 Internal Server errors.
+
+The `Server` type uses the `HandleFuncWithError` and simplifies starting an http server.  Any number of `Server` instances can be started, each running in a separate goroutine.
 
 `http/json` replaces boilerplate code needed to read from an `io.ReadCloser` and construct an object from the
 JSON byte array.
