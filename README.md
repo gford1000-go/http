@@ -3,8 +3,8 @@
 [![Documentation](https://img.shields.io/badge/Documentation-GoDoc-green.svg)](https://godoc.org/github.com/gford1000-go/http)
 
 
-HTTP | Geoff Ford
-=================
+HTTP
+====
 
 HTTP provides helper functions when using the standard golang `http` package.
 
@@ -19,7 +19,7 @@ JSON byte array.
 Installing and building the library
 ===================================
 
-This project requires Go 1.14.2
+This project requires Go 1.21.1 or later.
 
 To use this package in your own code, install it using `go get`:
 
